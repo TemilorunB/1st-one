@@ -133,3 +133,18 @@ select invoice_id, customer_id, billing_postal, total, rank() over (partition by
 
 
 select invoice_id, total,billing_state, sum(total) over (order by total) from invoice
+
+select * from album
+select * from artist
+
+
+select * from album
+join artist
+on (album.artist_id=artist.artist_id)
+
+select * from artist join album on album.artist_id=artist.artist_id limit 50
+
+select c.artist_id as category_name
+from album
+join artist
+on (album.artist_id=artist.artist_id)
